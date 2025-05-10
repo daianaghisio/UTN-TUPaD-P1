@@ -1,4 +1,4 @@
-'''#Ejercicio 1 
+#Ejercicio 1 
 for i in range(101):
     print(i)
 
@@ -40,7 +40,6 @@ print("La suma de los números ingresados es:", total)
 
 
 #Ejercicio 5
-
 import random
 numAAdivinar = random.randint(0,9)
 numero = -1
@@ -50,7 +49,7 @@ while numero != numAAdivinar:
     intentos += 1
 
 print("La cantidad de intentos hasta acertar fue de: ", intentos)
- '''
+ 
 
 #Ejercicio 6
 cien = 100
@@ -58,5 +57,65 @@ for cien in range(cien,0,-2):
     print(cien)
 
 #Ejercicio 7
-'''7) Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un
-número entero positivo indicado por el usuario.'''
+numIngresado = int(input("Ingrese un número entero positivo: "))
+totalSuma = 0
+while numIngresado != 0:
+    totalSuma += numIngresado
+    numIngresado -= 1
+print("La suma de los números ingresados es:", totalSuma)
+
+
+#Ejercicio 8
+pares = 0
+impares = 0
+positivos = 0
+negativos = 0
+
+cantidad = 10  # 100
+
+i = 1
+while i <= cantidad:
+    numero = int(input(f"Ingresá el número {i}: "))
+
+    if numero % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+
+    if numero > 0:
+        positivos += 1
+    elif numero < 0:
+        negativos += 1
+
+    i += 1
+
+print("Cantidad de números pares:", pares)
+print("Cantidad de números impares:", impares)
+print("Cantidad de números positivos:", positivos)
+print("Cantidad de números negativos:", negativos)
+
+
+#Ejercicio 9
+suma = 0
+cantidad = 10  #100
+
+i = 1
+while i <= cantidad:
+    numero = int(input(f"Ingresá el número {i}: "))
+    suma += numero
+    i += 1
+
+media = suma / cantidad
+print("La media de los números ingresados es:", media)
+
+
+#Ejercicio 10
+numero = int(input("Ingresá un número entero positivo: "))
+
+invertido = 0
+while numero != 0:
+    digito = numero % 10
+    invertido = invertido * 10 + digito
+    numero = numero // 10
+
+print("El número invertido es:", invertido)
